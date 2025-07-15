@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sync Code – Real-time Collaborative Code Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tsParticles CDN for animated coding particles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <span
+        ><i class="fas fa-bolt"></i> Experience seamless real-time collaboration
+        with Sync Code!
+        <a href="#features" class="announcement-link">Learn More →</a></span
+      >
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <i class="fas fa-code"></i>
+          <span>Sync Code</span>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="home-link">Home</a>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#use-cases">Use Cases</a>
+          <a
+            href="https://github.com/abdullahxyz85/Sync-Code-Collobrative-IDE"
+            class="cta-button github-button"
+            target="_blank"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a href="#newsletter" class="cta-button">Get Started</a>
+          <!-- Theme Icon -->
+          <div class="theme-selector">
+            <i class="fas fa-paint-brush theme-icon"></i>
+            <div class="theme-dropdown">
+              <!-- Theme options will be added here -->
+              <ul>
+                <li class="theme-category">Auto Mode</li>
+                <li data-theme="auto">
+                  <i class="fas fa-sync-alt"></i>
+                  <span>Auto Theme</span>
+                </li>
+                <hr />
+                <li class="theme-category">Landing Page Themes</li>
+                <li data-theme="landing-page-theme">
+                  <i class="fas fa-pager"></i>
+                  <span>Landing Page Theme</span>
+                </li>
+                <hr />
+                <li class="theme-category">Cool Colors</li>
+                <li data-theme="blue-theme">
+                  <i class="fas fa-waves"></i>
+                  <span>Blue Theme</span>
+                </li>
+                <li data-theme="ocean-theme">
+                  <i class="fas fa-water"></i>
+                  <span>Ocean Theme</span>
+                </li>
+                <li data-theme="purple-theme">
+                  <i class="fas fa-gem"></i>
+                  <span>Purple Theme</span>
+                </li>
+                <hr />
+                <li class="theme-category">Warm Colors</li>
+                <li data-theme="sunset-theme">
+                  <i class="fas fa-sun"></i>
+                  <span>Sunset Theme</span>
+                </li>
+                <li data-theme="rose-theme">
+                  <i class="fas fa-tint"></i>
+                  <span>Rose Theme</span>
+                </li>
+                <li data-theme="forest-theme">
+                  <i class="fas fa-tree"></i>
+                  <span>Forest Theme</span>
+                </li>
+                <hr />
+                <li class="theme-category">Special Colors</li>
+                <li data-theme="coral-theme">
+                  <i class="fas fa-fish"></i>
+                  <span>Coral Theme</span>
+                </li>
+                <hr />
+                <li data-theme="nordic-theme">
+                  <i class="fas fa-snowflake"></i>
+                  <span>Nordic Theme</span>
+                </li>
+                <li data-theme="sakura-theme">
+                  <i class="fas fa-leaf" style="color: #ff9cd9"></i>
+                  <span>Sakura Theme</span>
+                </li>
+                <li data-theme="autumn-theme">
+                  <i class="fas fa-leaf" style="color: #f08d41"></i>
+                  <span>Autumn Theme</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div id="hero-particles" class="hero-particles"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>
+            Empower Your Team with <span class="highlight">Sync Code</span>
+          </h1>
+          <p class="hero-desc">
+            A powerful and intuitive collaborative code editor designed to
+            empower developers and teams.<br />
+            Code together, debug together, and ship faster, together.
+          </p>
+          <a href="#" class="primary-button hero-cta"
+            ><i class="fas fa-rocket"></i> Start Coding Now</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Demo Video Section -->
+    <section id="demo-video" class="demo-video">
+      <div class="container">
+        <h2 class="section-title">Watch Sync Code in Action</h2>
+        <div class="video-container">
+          <iframe
+            src="https://github.com/Mohitur669/Realtime-Collaborative-Code-Editor/assets/79283402/14c17cc7-d23a-4d39-8af3-ef9e9fa8ef45"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-row">
+          <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h3>Real-Time Collaboration</h3>
+            <p>Multiple users can join a room and edit code together.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Live multi-user
+                editing
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Instant changes
+                sync
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-copy"></i>
+            <h3>Easy Room Sharing</h3>
+            <p>Share your coding room with a single click.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Copy room ID to
+                clipboard
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Quick room
+                joining
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-code"></i>
+            <h3>Syntax Highlighting</h3>
+            <p>Support for multiple programming languages.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Multiple
+                language support
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Enhanced code
+                readability
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-palette"></i>
+            <h3>Customizable Themes</h3>
+            <p>Choose your preferred theme for comfortable coding.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Multiple theme
+                options
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Theme
+                persistence
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-sign-out-alt"></i>
+            <h3>Flexible Access</h3>
+            <p>Join and leave rooms as needed.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Easy room
+                leaving
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Rejoin anytime
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-user-plus"></i>
+            <h3>User Management</h3>
+            <p>Real-time user presence tracking.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Live user
+                updates
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> User activity
+                tracking
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-save"></i>
+            <h3>Preferences Storage</h3>
+            <p>Your settings are saved for next time.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Theme
+                persistence
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Language
+                preferences
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-road"></i>
+            <h3>Future Features</h3>
+            <p>Exciting features coming soon.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Video & voice
+                chat
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> File upload
+                support
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-robot"></i>
+            <h3>AI Assistant & Chat</h3>
+            <p>Get intelligent code suggestions and real-time chat support.</p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Smart code
+                autocompletion
+              </li>
+              <li>
+                <i class="fas fa-check-circle orange-check"></i> Instant chat
+                assistance
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Features Grid -->
+    <section class="advanced-features">
+      <div class="container">
+        <h2 class="section-title">Advanced Capabilities</h2>
+        <div class="advanced-features-grid">
+          <div class="advanced-card">
+            <i class="fab fa-git-alt"></i>
+            <h3>Git Integration</h3>
+            <span class="feature-badge">Git</span>
+            <p>
+              Seamless Git workflow: manage branches, commits, and merges with
+              ease.
+            </p>
+          </div>
+          <div class="advanced-card">
+            <i class="fas fa-video"></i>
+            <h3>Session Recording</h3>
+            <span class="feature-badge">Recording</span>
+            <p>
+              Record and replay coding sessions for tutorials, reviews, and
+              onboarding.
+            </p>
+          </div>
+          <div class="advanced-card">
+            <i class="fas fa-check-double"></i>
+            <h3>Code Reviews</h3>
+            <span class="feature-badge">Reviews</span>
+            <p>
+              Request and perform code reviews directly in the IDE for better
+              code quality.
+            </p>
+          </div>
+          <div class="advanced-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Project Templates</h3>
+            <span class="feature-badge">Templates</span>
+            <p>
+              Quickly start new projects with ready-to-use templates for popular
+              stacks.
+            </p>
+          </div>
+          <div class="advanced-card">
+            <i class="fas fa-plug"></i>
+            <h3>Plugin Support</h3>
+            <span class="feature-badge">Plugins</span>
+            <p>
+              Extend CodeNest with custom plugins and integrations for a
+              tailored workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Create a Room</h3>
+            <p>
+              Click on the 'create new room' button and enter a username of your
+              choice.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Copy Room ID</h3>
+            <p>Copy the room ID by clicking on the 'Copy ROOM ID' button.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Join as Another User</h3>
+            <p>
+              Open another browser/browser-window or an incognito tab and go to
+              http://localhost:3000.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Enter Room ID</h3>
+            <p>Enter the same room ID to join the collaborative session.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+      <div class="container">
+        <h2 class="section-title">Perfect For</h2>
+        <div class="use-cases-row">
+          <div class="use-case-card">
+            <i class="fas fa-users-cog"></i>
+            <h3>Team Coding</h3>
+            <span class="feature-badge">Team</span>
+            <p>
+              Collaborate on any project, from anywhere, with real-time sync and
+              communication.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Teaching</h3>
+            <span class="feature-badge">Teaching</span>
+            <p>
+              Teach and mentor with live code, instant feedback, and
+              collaborative problem-solving.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <i class="fas fa-trophy"></i>
+            <h3>Hackathons</h3>
+            <span class="feature-badge">Hackathons</span>
+            <p>
+              Build, test, and deploy fast to win hackathons with powerful
+              collaboration and AI tools.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <i class="fas fa-user-check"></i>
+            <h3>Code Reviews</h3>
+            <span class="feature-badge">Reviews</span>
+            <p>
+              Improve code quality with built-in review tools, tracking changes
+              and discussing solutions.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Learning</h3>
+            <span class="feature-badge">Learning</span>
+            <p>
+              Experiment, learn, and get instant feedback from AI and peers in a
+              collaborative sandbox.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="our-team" class="our-team">
+      <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-description team-description">
+          Our dedicated team of innovators:
+        </p>
+        <div class="team-row">
+          <!-- Team Member 1 -->
+          <div class="team-card">
+            <img src="Daniil.jpg" alt="" class="team-photo" />
+            <h3>Daniil Butyrin</h3>
+            <ul>
+              <li>Computer Science</li>
+            </ul>
+            <a
+              href="#"
+              class="profile-button"
+              data-linkedin-url="https://lablab.ai/u/@daniil315"
+              ><i class="fas fa-external-link-alt"></i> Profile</a
+            >
+          </div>
+          <!-- Team Member 2 -->
+          <div class="team-card">
+            <img src="Khabab.png" alt="" class="team-photo" />
+            <h3>Khabab Akhtar</h3>
+            <ul>
+              <li>AI Engineer</li>
+            </ul>
+            <a
+              href="#"
+              class="profile-button"
+              data-linkedin-url="https://lablab.ai/u/@khabab_akhtar"
+              ><i class="fas fa-external-link-alt"></i> Profile</a
+            >
+          </div>
+          <!-- Team Member 3 -->
+          <div class="team-card">
+            <img src="png.png" alt="" class="team-photo" />
+            <h3>Abdullah Jameel</h3>
+            <ul>
+              <li>Software Engineer</li>
+            </ul>
+            <a
+              href="#"
+              class="profile-button"
+              data-linkedin-url="https://lablab.ai/u/@AbdullahBhatti308"
+              ><i class="fas fa-external-link-alt"></i> Profile</a
+            >
+          </div>
+          <!-- Team Member 4 -->
+          <div class="team-card">
+            <img src="sofia.jpg" alt="" class="team-photo" />
+            <h3>Sofiya Dassayeva</h3>
+            <ul>
+              <li>Computer Science</li>
+            </ul>
+            <a
+              href="#"
+              class="profile-button"
+              data-linkedin-url="https://lablab.ai/u/@dlotsss"
+              ><i class="fas fa-external-link-alt"></i> Profile</a
+            >
+          </div>
+          <!-- Team Member 5 -->
+          <div class="team-card">
+            <img src="Haniya.jpg" alt="" class="team-photo" />
+            <h3>Haniya Khan</h3>
+            <ul>
+              <li>Data Science</li>
+            </ul>
+            <a
+              href="#"
+              class="profile-button"
+              data-linkedin-url="https://lablab.ai/u/@dlotsss"
+              ><i class="fas fa-external-link-alt"></i> Profile</a
+            >
+          </div>
+          <!-- Team Member 6 -->
+          <div class="team-card">
+            <img src="arfa.jpg" alt="" class="team-photo" />
+            <h3>Arfa</h3>
+            <ul>
+              <li>ML Engineer</li>
+            </ul>
+            <a
+              href="#"
+              class="profile-button"
+              data-linkedin-url="https://lablab.ai/u/@dlotsss"
+              ><i class="fas fa-external-link-alt"></i> Profile</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section id="newsletter" class="newsletter">
+      <div class="container">
+        <h2 class="section-title">Stay in the Loop</h2>
+        <p class="newsletter-desc">
+          Get early access, product updates, and coding tips delivered to your
+          inbox.
+        </p>
+        <form class="newsletter-form" autocomplete="off">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Sync Code</h4>
+            <p>Collaborate, code, and create—together in the cloud.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#">Docs</a>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a
+                href="https://github.com/abdullahxyz85/Sync-Code-Collobrative-IDE"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Sync Code. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- tsParticles CDN for animated coding particles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
